@@ -12,6 +12,7 @@ setInterval(() =>{
     date.innerHTML =c.toLocaleTimeString();
 },1000)
 
-
+let weatherDegrees = document.getElementById("js--weather-degrees");
+console.log(weatherDegrees);
 
 

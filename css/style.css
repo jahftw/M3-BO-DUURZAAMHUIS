@@ -1,44 +1,72 @@
-*{padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-   }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
  
- html{
-     font-size: 62.5%;
- }
+html{
+  font-size: 62.5%;
+}
  
- body{
-     font-size: 1rem;
-     background: #EDF1D6;
-     display: flex;
-     display: flex;
-
-   }
- 
- .card{
-   width: 25rem;
-   height: 15rem;
-   background: #9DC08B;
-   border-radius: 1rem;
-   box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-   gap: 30rem;
-   margin: 5rem; 
- }
-
- .card--1{
-  display: flex;
-  color: #EDF1D6;
+body{
   font-size: 2rem;
+  background: #EDF1D6;  
+}
+
+header > img{
+  width: 15rem;
+  height: 10rem;
+  margin-left: 70rem;
+}
+
+main{
+  display: flex;
   justify-content: center;
-  
- }
+  align-items: center;
+  min-height: 100%;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+ 
+.card{
+  width: 25rem;
+  height: 15rem;
+  background: #9DC08B;
+  border-radius: 1rem;
+  box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  gap: 30rem;
+  margin: 5rem; 
+  margin-top: 0;
+  color: #EDF1D6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card--2{
+  font-size: 1.5rem;
+}
+
+.card--2 > p{
+  width: 2rem;
+  height: 1rem;
+  color: red;
+}
  
 .card--7{
-    width: 80rem;
-    height: 55rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  width: 70rem;
+  height: 55rem;
+}
+
+
+
+/* 
+je zet bijna nooit position absolute op iets
+inplaats daarvan heb ik flex-shrink en flex-wrap gebruikt.
+
+.card 7{
+  position: absolute;
+  bottom: 0;
+  right: 0; 
 }
 
 .section-1{
@@ -51,3 +79,4 @@
   bottom: 0;
   left: 400px;
 }
+*/

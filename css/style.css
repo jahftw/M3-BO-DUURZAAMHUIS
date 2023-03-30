@@ -10,13 +10,18 @@ html{
  
 body{
   font-size: 2rem;
-  background: #EDF1D6;  
+  background: linear-gradient(0deg, rgba(237,241,214,1) 0%, rgba(217,248,124,1) 60%, rgba(195,253,132,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 header > img{
   width: 15rem;
   height: 10rem;
-  margin-left: 70rem;
 }
 
 main{

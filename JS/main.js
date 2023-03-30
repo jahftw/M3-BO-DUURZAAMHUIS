@@ -9,7 +9,7 @@ setInterval(() =>{
 
 setInterval(() =>{
     let c = new Date();
-    date.innerHTML =c.toLocaleTimeString();
+    time.innerHTML =c.toLocaleTimeString();
 },1000)
 
 let weatherDegrees = document.getElementById("js--weather-degrees");

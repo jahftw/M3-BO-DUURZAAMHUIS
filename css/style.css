@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
- 
+
 html{
   font-size: 62.5%;
 }
@@ -76,6 +76,13 @@ main{
   width: 2rem;
   height: 1rem;
   color: #EDF1D6;
+}
+
+.card--3{
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
 }
 
 .card--6{

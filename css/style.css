@@ -62,7 +62,7 @@ main{
 }
 
 .card--2{
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
 }

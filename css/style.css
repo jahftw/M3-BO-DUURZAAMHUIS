@@ -10,6 +10,7 @@ html{
  
 body{
   font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
   background: linear-gradient(0deg, rgba(195,253,132,1),  0%, rgba(217,248,124,1) 20%, rgba(237,241,214,1)  100%);
   display: flex;
   justify-content: center;

@@ -21,12 +21,11 @@ let currentWeather = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.3
         return response.json();
     })
     .then(function(realData){
-    weatherMinDegrees.innerHTML = realData.daily.temperature_2m_min;
-    weatherMaxDegrees.innerHTML = realData.daily.temperature_2m_max;
-    if(realData.current_weather.time == realData.hourly.time){
-        realData.hourly.temperature_2m;
-    }
+        weatherMinDegrees.innerHTML = realData.daily.temperature_2m_min;
+        weatherMaxDegrees.innerHTML = realData.daily.temperature_2m_max;
+        weatherDegrees.innerHTML = realData.hourly.temperature_2m;
     });
+
 
 const sunrise = document.getElementById("js--sunrise");
 const sunset = document.getElementById("js--sunset");
@@ -42,3 +41,28 @@ let data = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.37&longitud
             sunset.innerHTML = sunsetTime;
         }
     );
+
+
+const labels = [
+    "Water",
+    "Gas",
+    "Electriciteit",
+];
+    
+const data1 = {
+    labels: labels,
+    datasets:[
+        {
+            label: "Gas, Water en Electriciteit Verbruik",
+            data: [1500, 2000, 1000],
+            backgroundColor: ['#B0DAFF', '#D864A9', '#EBB02D'],
+        }
+    ]
+};
+    
+const config = {
+    type: 'bar',
+    data: data1,
+};
+    
+const chart1 = new Chart(document.getElementById("js--chart-1"), config);

@@ -15,7 +15,6 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  flex-shrink: 0;
   flex-wrap: wrap;
 }
 
@@ -38,7 +37,6 @@ main{
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  flex-shrink: 0;
   flex-wrap: wrap;
 }
  
@@ -115,32 +113,3 @@ main{
   flex-direction: column;
 }
 
-.card--7 > img{
-  width: 70%;
-  height: 70%;
-  border-radius: 1rem;
-}
-
-
-
-/* 
-je zet bijna nooit position absolute op iets
-inplaats daarvan heb ik flex-shrink en flex-wrap gebruikt.
-
-.card 7{
-  position: absolute;
-  bottom: 0;
-  right: 0; 
-}
-
-.section-1{
-  position: absolute;
-  bottom: 0;
-}
-
-.section-2{
-  position: absolute;
-  bottom: 0;
-  left: 400px;
-}
-*/

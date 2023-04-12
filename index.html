@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/main.js" defer></script>
+  <script src="https://kit.fontawesome.com/df78193d73.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,18 +28,22 @@
           <p>°C</p>
         </div>
         <div>
-          <p>Min.</p>
+          <i class="fa-solid fa-temperature-low"></i>
           <p id="js--weather-minDegrees"> 0 </p>
           <p>°C</p>
-        </div>
-        <div>
-          <p>Max.</p>
+        
+          <i class="fa-solid fa-temperature-high"></i>
           <p id="js--weather-maxDegrees"> 0 </p>
           <p>°C</p>
         </div>
         <div>
-          <p>0</p>
-          <p>% Luchtvochtigheid</p>
+          <p id="js--weather-humidity">0</p>
+          <p>% Humidity</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-cloud-rain"></i>
+          <p id="js--weather-precipitation">0</p>
+          <p>%</p>
         </div>
       </section>
       <section class="card card--3">
@@ -58,7 +63,7 @@
       <section class="card card--5">
       </section>
       <section class="card card--6">
-        <h3>Lichtsterkte in kamer</h3>
+        <h3>Brightness in room</h3>
         <p>0</p>
         <div class="licht">
           <p class="licht--low">0</p>
@@ -68,7 +73,7 @@
       </section>
     </article>
     <section class="card card--7">
-      <h3>Gas, Water, Licht Verbruik</h3>
+      <h3>Gas, Water, Light Usage</h3>
       <canvas id="js--chart-1"></canvas>
     </section>
   </main>

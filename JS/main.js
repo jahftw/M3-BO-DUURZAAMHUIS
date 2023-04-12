@@ -1,6 +1,8 @@
 let date = document.getElementById("current-date")
 let time = document.getElementById("current-time")
 
+let today = new Date();
+let hour = today.getHours();
 
 setInterval(() =>{
     let d = new Date();
@@ -15,16 +17,22 @@ setInterval(() =>{
 let weatherDegrees = document.getElementById("js--weather-degrees");
 let weatherMinDegrees = document.getElementById("js--weather-minDegrees");
 let weatherMaxDegrees = document.getElementById("js--weather-maxDegrees");
+let weatherHumidity = document.getElementById("js--weather-humidity");
+let weatherPrecipitation = document.getElementById("js--weather-precipitation");
 
-let currentWeather = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum&forecast_days=1&timezone=auto")
+let currentWeather = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&hourly=temperature_2m&hourly=relativehumidity_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max&forecast_days=1&timezone=auto")
     .then(function(response){
         return response.json();
     })
     .then(function(realData){
+        weatherDegrees.innerHTML = realData.hourly.temperature_2m[hour];
         weatherMinDegrees.innerHTML = realData.daily.temperature_2m_min;
         weatherMaxDegrees.innerHTML = realData.daily.temperature_2m_max;
-        weatherDegrees.innerHTML = realData.hourly.temperature_2m;
+        weatherHumidity.innerHTML = realData.hourly.relativehumidity_2m[hour];
+        weatherPrecipitation.innerHTML = realData.daily.precipitation_probability_max;
     });
+
+
 
 
 const sunrise = document.getElementById("js--sunrise");

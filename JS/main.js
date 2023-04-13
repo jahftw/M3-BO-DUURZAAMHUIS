@@ -54,14 +54,14 @@ let data = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.37&longitud
 const labels = [
     "Water",
     "Gas",
-    "Electriciteit",
+    "Electricity",
 ];
     
 const data1 = {
     labels: labels,
     datasets:[
         {
-            label: "Gas, Water en Electriciteit Verbruik",
+            label: "Gas, Water en Electricity Usage",
             data: [1500, 2000, 1000],
             backgroundColor: ['#B0DAFF', '#D864A9', '#EBB02D'],
         }

@@ -34,6 +34,8 @@ let currentWeather = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.3
 
 let brigthnessIntensity = document.getElementById("js--brightness-intensity");
 let brightness = document.getElementById("js--brightness");
+let temperatureInside = document.getElementById("js--temperature-inside");
+let temperatureOutside = document.getElementById("js--temperature-outside");
 let currentBrightness = fetch("https://35829.hosts2.ma-cloud.nl/IoT/post.php")
     .then(function(response){
         return response.json();
@@ -49,6 +51,9 @@ let currentBrightness = fetch("https://35829.hosts2.ma-cloud.nl/IoT/post.php")
             brigthnessIntensity.innerHTML = "High";
         }
         brightness.innerHTML = realData.licht;
+        temperatureInside.innerHTML = realData.temp;
+        temperatureOutside.innerHTML = realData.temp;
+        //de temp is hetzelfde vanwege dat er maar 1 sensor is aaangeboden
     })
 const sunrise = document.getElementById("js--sunrise");
 const sunset = document.getElementById("js--sunset");

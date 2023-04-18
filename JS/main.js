@@ -32,9 +32,24 @@ let currentWeather = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.3
         weatherPrecipitation.innerHTML = realData.daily.precipitation_probability_max;
     });
 
-
-
-
+let brigthnessIntensity = document.getElementById("js--brightness-intensity");
+let brightness = document.getElementById("js--brightness");
+let currentBrightness = fetch("https://35829.hosts2.ma-cloud.nl/IoT/post.php")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(realData){
+        if(realData.licht < 200){
+            brigthnessIntensity.innerHTML = "Low";
+        }
+        else if(realData.licht < 500){
+            brigthnessIntensity.innerHTML = "Medium";
+        }
+        else if(realData.licht < 800){
+            brigthnessIntensity.innerHTML = "High";
+        }
+        brightness.innerHTML = realData.licht;
+    })
 const sunrise = document.getElementById("js--sunrise");
 const sunset = document.getElementById("js--sunset");
 
@@ -63,7 +78,7 @@ const data1 = {
         {
             label: "Gas, Water en Electricity Usage",
             data: [1500, 2000, 1000],
-            backgroundColor: ['#B0DAFF', '#D864A9', '#EBB02D'],
+            backgroundColor: ['#B0DAFF'],
         }
     ]
 };

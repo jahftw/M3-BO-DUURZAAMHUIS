@@ -51,8 +51,8 @@ let currentBrightness = fetch("https://35829.hosts2.ma-cloud.nl/IoT/post.php")
             brigthnessIntensity.innerHTML = "High";
         }
         brightness.innerHTML = realData.licht;
-        temperatureInside.innerHTML = realData.temp;
-        temperatureOutside.innerHTML = realData.temp;
+        temperatureInside.innerHTML = Number((realData.temp).toFixed(1));
+        temperatureOutside.innerHTML = Number((realData.temp).toFixed(1));
         //de temp is hetzelfde vanwege dat er maar 1 sensor is aaangeboden
     })
 const sunrise = document.getElementById("js--sunrise");

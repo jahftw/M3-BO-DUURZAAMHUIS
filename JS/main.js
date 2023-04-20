@@ -83,7 +83,9 @@ const data1 = {
         {
             label: "Gas, Water en Electricity Usage",
             data: [1500, 2000, 1000],
-            backgroundColor: ['#B0DAFF'],
+            borderColor: '#fff',
+            backgroundColor: ['#438b59', '#336843', '#275234'],
+            borderWidth: 2
         }
     ]
 };

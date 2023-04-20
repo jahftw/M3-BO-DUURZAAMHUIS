@@ -64,6 +64,8 @@ main{
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  background: #aad694;
+
 }
 
 .card--2 > div{
@@ -94,6 +96,7 @@ main{
 .card--4 {
   display: flex;
   flex-direction: column;
+  background: #aad694;
 }
 
 .card--5{
@@ -104,6 +107,7 @@ main{
 .card--6{
   display: flex;
   flex-direction: column;
+  background: #aad694;
 }
 
 .card--6 > .licht{
@@ -129,5 +133,6 @@ main{
   height: 55rem;
   display: flex;
   flex-direction: column;
+  background: #aad694;
 }
 
